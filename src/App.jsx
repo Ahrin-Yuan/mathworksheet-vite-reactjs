@@ -4,6 +4,7 @@ import './App.css'
 // Import Components
 import Header from "./Components/Header/Header";
 import ActionButtons from "./Components/ActionButtons/ActionButtons";
+import QuestionsSection from "./Components/QuestionsSection/QuestionsSection";
 import Footer from "./Components/Footer/Footer";
 
 
@@ -15,6 +16,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [answers, setAnswers] = useState({});
   const [showNameError, setShowNameError] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
     // Handle answer selection
   const handleAnswerChange = (questionId, selectedAnswer) => {
@@ -22,6 +24,18 @@ function App() {
       ...prev,
       [questionId]: selectedAnswer
     }));
+
+    // Auto-advance to next question after short delay
+    setTimeout(() => {
+      setCurrentQuestionIndex(prev => {
+        if (prev < questionsData.length - 1) {
+          return prev + 1;
+        } else {
+          return prev; // Don't go past the last question
+        }
+      });
+    }, 400); // slight delay so click still feels responsive
+  };
 
 
     // Handle name input
@@ -43,8 +57,9 @@ function App() {
   }
 
   const handleReset = () => {
-    setShowNameError(false);
     setAnswers({});
+    setShowNameError(false);
+    setCurrentQuestionIndex(0);
   }
   // Calculate answered questions count
   const answeredQuestions = Object.keys(answers).length;
@@ -65,14 +80,19 @@ function App() {
           <p>Circle the correct answers.</p>
         </section>
 
-        <QuestionsSection/>
+        <QuestionsSection
+          questions={questionsData}
+          answers={answers}
+          currentQuestionIndex={currentQuestionIndex}
+          onAnswerChange={handleAnswerChange}
+        />
 
         <ActionButtons
           onReset={handleReset}
           onSubmit={handleSubmit}
         />
 
-        <ScoreDisplay/>
+        {/* <ScoreDisplay/> */}
         
       </div>
 
@@ -83,6 +103,6 @@ function App() {
     </div>
   );
 };
-}
+
 
 export default App;
