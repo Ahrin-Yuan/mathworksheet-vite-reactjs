@@ -2,7 +2,26 @@ import React from 'react';
 
 const NameInput = () => {
     return (
-        
+        <section className="name-section">
+            <div className="name-input-container">
+                <label htmlFor="userName" className="name-label">
+                Name:
+                </label>
+                <input 
+                    id="userName"
+                    type="text"
+                    value={userName}
+                    onChange={onNameChange}
+                    className={`name-input ${showError ? "error" : ""}`}
+                    placeholder="Enter your name"
+                />
+                {showError && (
+                <span className="error-message">
+                    Please enter your name before submitting
+                </span>
+                )}
+            </div>
+        </section>
     );
 };
 
