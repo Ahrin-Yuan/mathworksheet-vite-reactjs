@@ -46,6 +46,8 @@ function App() {
     setShowNameError(false);
     setAnswers({});
   }
+  // Calculate answered questions count
+  const answeredQuestions = Object.keys(answers).length;
 
   return (
     <div className="app">
@@ -53,6 +55,7 @@ function App() {
         userName={userName}
         onNameChange={handleNameChange}
         showNameError={showNameError}
+        answeredQuestions={answeredQuestions}
         totalQuestions={questionsData.length}
       />
 
