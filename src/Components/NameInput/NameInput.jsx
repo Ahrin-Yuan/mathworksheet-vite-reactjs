@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NameInput = () => {
+const NameInput = ({userName, onNameChange, showError}) => {
     return (
         <section className="name-section">
             <div className="name-input-container">
