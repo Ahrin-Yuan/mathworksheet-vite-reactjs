@@ -5,6 +5,7 @@ import './App.css'
 import Header from "./Components/Header/Header";
 import ActionButtons from "./Components/ActionButtons/ActionButtons";
 import QuestionsSection from "./Components/QuestionsSection/QuestionsSection";
+import ScoreDisplay from "./Components/ScoreDisplay/ScoreDisplay";
 import Footer from "./Components/Footer/Footer";
 
 
@@ -17,6 +18,8 @@ function App() {
   const [answers, setAnswers] = useState({});
   const [showNameError, setShowNameError] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [score, setScore] = useState(null);
+  const [showScore, setShowScore] = useState(false);
 
     // Handle answer selection
   const handleAnswerChange = (questionId, selectedAnswer) => {
@@ -46,6 +49,17 @@ function App() {
     }
   };
 
+    // Calculate score
+  const calculateScore = () => {
+    let correctCount = 0;
+    questionsData.forEach((question) => {
+      if (answers[question.id] === question.correctAnswer) {
+        correctCount++;
+      }
+    });
+    return correctCount;
+  };
+
   // Handle submit
   const handleSubmit = () => {
     // Validate name
@@ -53,14 +67,20 @@ function App() {
       setShowNameError(true);
       return;
     }
-  
+    const finalScore = calculateScore();
+      setScore(finalScore);
+      setShowScore(true);
   }
 
+ // Handle reset
   const handleReset = () => {
     setAnswers({});
     setShowNameError(false);
     setCurrentQuestionIndex(0);
+    setScore(null);
+    setShowScore(false);
   }
+
   // Calculate answered questions count
   const answeredQuestions = Object.keys(answers).length;
 
@@ -92,7 +112,11 @@ function App() {
           onSubmit={handleSubmit}
         />
 
-        {/* <ScoreDisplay/> */}
+        <ScoreDisplay
+          score={score}
+          totalQuestions={questionsData.length}
+          show={showScore}
+        />
         
       </div>
 
