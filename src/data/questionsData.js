@@ -1,6 +1,4 @@
-import React from 'react';
-
-const questionsData = [
+export const questionsData = [
   {
     id: 1,
     question: "17 rounded off to the nearest 10 is...",
@@ -122,5 +120,3 @@ const questionsData = [
     correctAnswer: "1,000",
   },
 ];
-
-export default questionsData;
