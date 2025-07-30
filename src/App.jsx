@@ -1,14 +1,26 @@
 import { useState } from 'react'
 import './App.css'
-import { questionsData } from './Components/data/questionsData';
+
+// Import Components
+import Footer from "./Components/Footer/Footer";
+
+// Import data
+import { questionsData } from './data/questionsData';
 
 function App() {
   
 
   return (
-    <>
-      
-    </>
+    <div className="app">
+      <Header/>
+
+      <main/><main/>
+
+
+
+      <Footer />
+
+    </div>
   )
 }
 
