@@ -1,4 +1,5 @@
 import React from 'react';
+import './ScoreDisplay.css';
 
 const ScoreDisplay = ({ score, totalQuestions, show }) => {
   if (!show) return null;

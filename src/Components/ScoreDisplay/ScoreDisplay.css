@@ -1,0 +1,98 @@
+/* Score Display Styles */
+.score-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: scoreReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.score-card {
+  background: rgba(42, 47, 62, 0.8);
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 175, 55, 0.2);
+  min-width: 300px;
+}
+
+.score-title {
+  font-size: 1.8rem;
+  color: #e8e8e8;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.score-display {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.score-number {
+  color: #d4af37;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  animation: countUp 1s ease-out;
+}
+
+.score-total {
+  font-size: 2rem;
+  color: #a8a8a8;
+}
+
+.score-percentage {
+  font-size: 1.5rem;
+  color: #a8a8a8;
+  margin-bottom: 1rem;
+}
+
+.score-message {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e8e8e8;
+  padding: 0.5rem 1rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Animations */
+@keyframes scoreReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .score-display {
+    font-size: 3rem;
+  }
+
+  .score-card {
+    margin: 0 -0.5rem;
+    min-width: auto;
+    width: 100%;
+  }
+}
