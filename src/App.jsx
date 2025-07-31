@@ -74,6 +74,7 @@ function App() {
 
  // Handle reset
   const handleReset = () => {
+    setUserName("");
     setAnswers({});
     setShowNameError(false);
     setCurrentQuestionIndex(0);
