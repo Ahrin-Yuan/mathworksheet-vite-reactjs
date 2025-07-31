@@ -1,4 +1,5 @@
 import React from 'react';
+import './QuestionsSection.css';
 import QuestionCard from "./QuestionCard";
 
 const QuestionsSection = ({ questions, answers, currentQuestionIndex, onAnswerChange }) => {

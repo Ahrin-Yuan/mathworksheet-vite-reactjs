@@ -1,4 +1,5 @@
 import React from 'react';
+import './QuestionCard.css';
 
 const QuestionCard = ({  question, index, isActive, selectedAnswer, onAnswerChange }) => {
     return (

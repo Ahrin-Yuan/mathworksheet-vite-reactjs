@@ -1,0 +1,42 @@
+/* Questions Section Styles */
+.questions-section {
+  margin-bottom: 3rem;
+}
+
+.questions-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .questions-grid {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .questions-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .questions-grid {
+    grid-template-columns: 1fr;
+  }
+}
