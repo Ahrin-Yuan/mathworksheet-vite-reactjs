@@ -1,6 +1,9 @@
 /* Questions Section Styles */
 .questions-section {
   margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .questions-grid {
@@ -8,6 +11,9 @@
   flex-direction: column;
   gap: 2rem;
   animation: fadeInUp 0.8s ease-out;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
 }
 
 /* Fade in animation */

@@ -47,4 +47,19 @@ body {
   .app {
     padding: 0 0.75rem;
   }
+  .main-content {
+    padding: 20px 0.75rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 0 0.5rem;
+  }
+  
+  .main-content {
+    padding: 20px 0.5rem;
+    padding-bottom: 2rem;
+  }
 }

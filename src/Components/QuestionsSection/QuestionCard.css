@@ -149,12 +149,17 @@
 @media (max-width: 768px) {
   .question-card {
     padding: 1.25rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(100vw - 1.5rem);
   }
 }
 
 @media (max-width: 640px) {
   .question-card {
-    margin: 0 -0.5rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(100vw - 1.5rem);
   }
 }
 
