@@ -1,0 +1,12 @@
+/* Footer Styles */
+.footer {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.copyright {
+  color: #a8a8a8;
+  font-size: 0.9rem;
+}
