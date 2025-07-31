@@ -1,4 +1,5 @@
 import React from 'react';
+import './NameInput.css';
 
 const NameInput = ({userName, onNameChange, showError}) => {
     return (

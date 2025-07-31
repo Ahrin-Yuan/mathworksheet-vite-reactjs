@@ -1,0 +1,45 @@
+/* Header Styles */
+.headerSticky-top {
+  position: sticky;
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  margin-bottom: 2rem;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #151820 100%);
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.header .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e8e8e8;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 0 1rem;
+  }
+
+  .header .title {
+    font-size: 1.5rem;
+  }
+}

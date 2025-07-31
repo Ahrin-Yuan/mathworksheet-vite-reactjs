@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.css';
 import ProgressBar from './ProgressBar';
 import NameInput from './NameInput';
 

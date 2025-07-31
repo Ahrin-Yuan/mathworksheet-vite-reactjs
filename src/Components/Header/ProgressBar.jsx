@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProgressBar.css';
 
 const ProgressBar = ({answered, total}) => {
     const progressPercentage = (answered / total) * 100;
