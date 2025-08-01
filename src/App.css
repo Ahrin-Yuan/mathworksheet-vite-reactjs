@@ -27,7 +27,7 @@ body {
   padding: 20px 40px;
   padding-bottom: 2rem;
   max-width: 100%;
-  margin: 0 auto; /* This centers it horizontally */
+  margin: 0 auto; /* centers horizontally */
 }
 
 /* Instructions */
@@ -41,6 +41,9 @@ body {
   color: #a8a8a8;
   font-style: italic;
 }
+
+
+
 
 /* Global Responsive Design */
 @media (max-width: 768px) {

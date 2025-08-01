@@ -10,7 +10,7 @@ const ScoreDisplay = ({ score, totalQuestions, show }) => {
     if (score >= 10) return "Excellent work!";
     if (score >= 8) return "Good job!";
     if (score >= 6) return "Keep practicing!";
-    return "It's Okay. Let's Try again!";
+    return "It's okay! Let's Try again!";
   };
 
   return (

@@ -8,7 +8,6 @@ import QuestionsSection from "./Components/QuestionsSection/QuestionsSection";
 import ScoreDisplay from "./Components/ScoreDisplay/ScoreDisplay";
 import Footer from "./Components/Footer/Footer";
 
-
 // Import data
 import { questionsData } from './data/questionsData';
 
@@ -20,6 +19,7 @@ function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(null);
   const [showScore, setShowScore] = useState(false);
+
 
     // Handle answer selection
   const handleAnswerChange = (questionId, selectedAnswer) => {
@@ -60,7 +60,7 @@ function App() {
     return correctCount;
   };
 
-  // Handle submit
+  // Handle submit -- Updated to include score submission
   const handleSubmit = () => {
     // Validate name
     if (!userName.trim()) {
@@ -70,7 +70,9 @@ function App() {
     const finalScore = calculateScore();
       setScore(finalScore);
       setShowScore(true);
-  }
+    
+  };
+
 
  // Handle reset
   const handleReset = () => {
@@ -81,6 +83,7 @@ function App() {
     setScore(null);
     setShowScore(false);
   }
+
 
   // Calculate answered questions count
   const answeredQuestions = Object.keys(answers).length;
@@ -94,6 +97,7 @@ function App() {
         answeredQuestions={answeredQuestions}
         totalQuestions={questionsData.length}
       />
+
 
       <div className="main-content">
         {/* Instructions */}
@@ -118,10 +122,9 @@ function App() {
           totalQuestions={questionsData.length}
           show={showScore}
         />
+
         
       </div>
-
-
 
       <Footer />
 
