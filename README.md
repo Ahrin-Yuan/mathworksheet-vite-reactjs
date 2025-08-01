@@ -23,7 +23,7 @@ This is a **responsive** and **interactive math worksheet** web application buil
 
 
 
-## 🧠 Tech Stack
+## Tech Stack
 
 - **Framework**: ReactJs (with Vite)
 - **Styling**: CSS3
@@ -33,7 +33,7 @@ This is a **responsive** and **interactive math worksheet** web application buil
 
 
 
-## 🧩 Components Overview
+## Components Overview
 
 | Component          | Purpose |
 |--------------------|---------|
@@ -55,15 +55,15 @@ This is a **responsive** and **interactive math worksheet** web application buil
 
 
 
-## 📝 Future Improvements
+## Future Improvements
 
-- 🔒 Add backend integration to log and display high scores.
-- 🎨 Improve styling with more animations and transitions.
-- 🔧 Enhance accessibility (keyboard navigation, ARIA labels, etc.)
+- Add backend integration to log and display high scores.
+- Improve styling with more animations and transitions.
+- Enhance accessibility (keyboard navigation, ARIA labels, etc.)
 
 
 
-## 👩‍💻 Author
+## Author
 
 Contributer: **Irene @ Ahrin** (This project was built for front-end development assessment purposes).
 
