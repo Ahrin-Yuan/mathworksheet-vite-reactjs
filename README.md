@@ -5,20 +5,21 @@ This is a **responsive** and **interactive math worksheet** web application buil
 
 ## 🚀 Live Demo
 
-👉 [View the live app on Vercel](https://mathworksheet-vite-reactjs-q8pxa288w-irenes-projects-93738ad5.vercel.app)
+👉 Live: [@mathworksheet-vite-reactjs](https://mathworksheet-vite-reactjs-q8pxa288w-irenes-projects-93738ad5.vercel.app)
+
 
 
 ## 📁 Features
 
-- ✅ Fully responsive layout for desktop, tablet, and mobile
-- ✅ Built with reusable, modular React components
-- ✅ Auto-advancing question navigation
-- ✅ Score calculation (0–12)
-- ✅ Name input required before submission
-- ✅ Reset functionality to clear answers, score displayed & name input and restart
-- ✅ Styled with clean, accessible, and mobile-friendly design
-- ✅ Copyright notice included
-- ✅ Deployed via Vercel
+- Fully responsive layout for desktop, tablet, and mobile
+- Built with reusable, modular React components
+- Auto-advancing question navigation
+- Score calculation (0–12)
+- Name input required before submission
+- Reset functionality to clear answers, score displayed & name input and restart
+- Styled with clean, accessible, and mobile-friendly design
+- Copyright notice included
+- Deployed via Vercel
 
 
 
