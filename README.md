@@ -3,13 +3,13 @@
 This is a **responsive** and **interactive math worksheet** web application built using **React.js**. It replicates a simple Grade 4 worksheet focused on Rounding to the Nearest Ten, with added interactivity and score tracking.
 
 
-## 🚀 Live Demo
+## Live Demo
 
-👉 Live: [@mathworksheet-vite-reactjs](https://mathworksheet-vite-reactjs-q8pxa288w-irenes-projects-93738ad5.vercel.app)
+🚀 Live: [@mathworksheet-vite-reactjs](https://mathworksheet-vite-reactjs-q8pxa288w-irenes-projects-93738ad5.vercel.app)
 
 
 
-## 📁 Features
+## Features
 
 - Fully responsive layout for desktop, tablet, and mobile
 - Built with reusable, modular React components
